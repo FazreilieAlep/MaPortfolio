@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<!--
+Fazreilie's Official Portfolio site
+-->
+<html id="Gallery"><head>
+        <style>html{
+                visibility: hidden;
+                opacity:0;
+            }</style>
+        <title>Fazreilie's Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="asset/style/portfolio.css">
+        <link rel="stylesheet" type="text/css" href="asset/style/modalCSS.css">
+        <link rel="stylesheet" type="text/css" href="asset/style/fontawesome-free-5.15.3-web/css/all.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+        <script>
+            function reveal() {
+                var reveals = document.querySelectorAll(".reveal");
+                for (var i = 0; i < reveals.length; i++) {
+                    var windowHeight = window.innerHeight;
+                    var elementTop = reveals[i].getBoundingClientRect().top;
+                    var elementVisible = 150;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveals[i].classList.add("active");
+                    } else {
+                        reveals[i].classList.remove("active");
+                    }
+                }
+            }
+
+            window.addEventListener("scroll", reveal);
+            // To check the scroll position on page load
+            reveal();
+        </script>
+        <script>
+            window.onload = function () {
+                var maflixi = document.getElementById('Maflixi'),
+                        maportfolio = document.getElementById('MaPortfolio'),
+                        greendeals = document.getElementById('GreenDeals');
+                var TrainingFLS = document.getElementById('Training-Level-FLS'),
+                        MLAcademic = document.getElementById('MLAcademicProject'),
+                        InvestmentAnalyser = document.getElementById('MaInvestmentAnalyser');
+
+                function switchVisibleTrainingFLS() {
+                    if (!TrainingFLS)
+                        return;
+                    if (getComputedStyle(TrainingFLS).display === 'none') {
+                        TrainingFLS.style.display = 'flex';
+                        MLAcademic.style.display = 'none';
+                        InvestmentAnalyser.display = 'none'
+
+                        document.getElementById('switchTrainingLevelFLS').style.backgroundColor = '#40fdeb59';
+                        document.getElementById('switchMLAcademicProject').style.backgroundColor = 'white';
+                        document.getElementById('switchMaInvestmentAnalyser').style.backgroundColor = 'white';
+                    }
+                }
+                function switchVisibleMLAProject() {
+                    if (!MLAcademic)
+                        return;
+                    if (getComputedStyle(MLAcademic).display === 'none') {
+                        TrainingFLS.style.display = 'none';
+                        MLAcademic.style.display = 'flex';
+                        InvestmentAnalyser.display = 'none'
+
+                        document.getElementById('switchTrainingLevelFLS').style.backgroundColor = 'white';
+                        document.getElementById('switchMLAcademicProject').style.backgroundColor = '#40fdeb59';
+                        document.getElementById('switchMaInvestmentAnalyser').style.backgroundColor = 'white';
+                    }
+                }
+                function switchVisibleInvestmentAnalyzer() {
+                    if (!InvestmentAnalyser)
+                        return;
+                    if (getComputedStyle(InvestmentAnalyser).display === 'none') {
+                        TrainingFLS.style.display = 'none';
+                        MLAcademic.style.display = 'none';
+                        InvestmentAnalyser.display = 'flex'
+
+                        document.getElementById('switchTrainingLevelFLS').style.backgroundColor = 'white';
+                        document.getElementById('switchMLAcademicProject').style.backgroundColor = 'white';
+                        document.getElementById('switchMaInvestmentAnalyser').style.backgroundColor = '#40fdeb59';
+                    }
+                }
+                function switchVisibleMaflixi() {
+                    if (!maflixi)
+                        return;
+                    if (getComputedStyle(maflixi).display === 'none') {
+                        maflixi.style.display = 'block';
+                        maportfolio.style.display = 'none';
+                        greendeals.style.display = 'none';
+
+                        document.getElementById('switchMaflixi').style.borderBottom = '0.15em solid black';
+                        document.getElementById('switchMaPortfolio').style.borderBottom = 'none';
+                        document.getElementById('switchGreenDeals').style.borderBottom = 'none';
+                    }
+                }
+                function switchVisibleMaPortfolio() {
+                    if (!maportfolio)
+                        return;
+                    if (getComputedStyle(maportfolio).display === 'none') {
+                        maflixi.style.display = 'none';
+                        maportfolio.style.display = 'block';
+                        greendeals.style.display = 'none';
+
+                        document.getElementById('switchMaflixi').style.borderBottom = 'none';
+                        document.getElementById('switchMaPortfolio').style.borderBottom = '0.15em solid black';
+                        document.getElementById('switchGreenDeals').style.borderBottom = 'none';
+                    }
+                }
+                function switchVisibleGreenDeals() {
+                    if (!greendeals)
+                        return;
+                    if (getComputedStyle(greendeals).display === 'none') {
+                        maflixi.style.display = 'none';
+                        maportfolio.style.display = 'none';
+                        greendeals.style.display = 'block';
+
+                        document.getElementById('switchMaflixi').style.borderBottom = 'none';
+                        document.getElementById('switchMaPortfolio').style.borderBottom = 'none';
+                        document.getElementById('switchGreenDeals').style.borderBottom = '0.15em solid black';
+                    }
+                }
+                document.getElementById('switchMaflixi').addEventListener('click', switchVisibleMaflixi);
+                document.getElementById('switchMaPortfolio').addEventListener('click', switchVisibleMaPortfolio);
+                document.getElementById('switchGreenDeals').addEventListener('click', switchVisibleGreenDeals);
+
+                document.getElementById('switchTrainingLevelFLS').addEventListener('click', switchVisibleTrainingFLS);
+                document.getElementById('switchMLAcademicProject').addEventListener('click', switchVisibleMLAProject);
+                document.getElementById('switchMaInvestmentAnalyser').addEventListener('click', switchVisibleInvestmentAnalyzer);
+
+            }
+        </script>
+        <style>
+            .smoothScroll {
+                scroll-behavior: smooth;
+            }
+            @import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+            .containerAtSpace {
+                position: relative;
+                margin: auto;
+                width: 100%;
+                height: 80%;
+                top: 0;
+                bottom: 0;
+                filter: url(#threshold) blur(0.6px);
+                display: flex;
+                align-items: center;
+                color: #ffb500;
+            }
+
+            #text1,
+            #text2 {
+                position: absolute;
+                width: 100%;
+                display: inline-block;
+
+                font-family: "Raleway", sans-serif;
+                font-size: 80pt;
+
+                text-align: center;
+
+                user-select: none;
+            }
+
+            .reveal{
+                position: relative;
+                transform: translateY(150px);
+                opacity: 0;
+                transition: 1s all ease;
+            }
+
+            .reveal.active{
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            .close {
+                position: absolute;
+                right: 1em;
+                top: 1em;
+                width: 32px;
+                height: 32px;
+                opacity: 0.5;
+            }
+            .close:hover {
+                opacity: 1;
+            }
+            .close:before, .close:after {
+                position: absolute;
+                left: 15px;
+                content: ' ';
+                height: 33px;
+                width: 2px;
+                background-color: #f00;
+            }
+            .close:before {
+                transform: rotate(45deg);
+            }
+            .close:after {
+                transform: rotate(-45deg);
+            }
+
+
+
+
+            @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+            /*            body {
+                            
+                            background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
+                            -webkit-backface-visibility: hidden;
+                            -webkit-perspective: 1000;
+                            -webkit-transform: translate3d(0,0,0);
+                            
+                            text-align:center;
+                            color:#555;
+                            font-family:'Roboto';
+                            font-weight:300;
+                            font-size:32px;
+                            padding-top:40vh;
+                            height:100vh;
+                            overflow:hidden;
+                        }*/
+
+            .AIheadings {
+                text-align:center;
+                display:inline-block;
+                overflow:hidden;
+                white-space:nowrap;
+                color:#555;
+                font-weight:300;
+                font-size: 1.3em;
+            }
+
+            .AIheadings-first {    /* For increasing performance 
+                                   ID/Class should've been used. 
+                                   For a small demo 
+                                   it's okaish for now */
+                animation: showup 7s infinite;
+            }
+
+            .AIheadings-last {
+                width:0px;
+                animation: reveal 7s infinite;
+            }
+
+            .AIheadings-last span {
+                margin-left:-305px;
+                animation: slidein 7s infinite;
+            }
+
+            @keyframes showup {
+                0% {
+                    opacity:0;
+                }
+                20% {
+                    opacity:1;
+                }
+                80% {
+                    opacity:1;
+                }
+                100% {
+                    opacity:0;
+                }
+            }
+
+            @keyframes slidein {
+                0% {
+                    margin-left:-800px;
+                }
+                20% {
+                    margin-left:-800px;
+                }
+                35% {
+                    margin-left:0px;
+                }
+                100% {
+                    margin-left:0px;
+                }
+            }
+
+            @keyframes reveal {
+                0% {
+                    opacity:0;
+                    width:0px;
+                }
+                20% {
+                    opacity:1;
+                    width:0px;
+                }
+                30% {
+                    width:250px;
+                }
+                80% {
+                    opacity:1;
+                }
+                100% {
+                    opacity:0;
+                    width:250px;
+                }
+            }
+
+
+            .waviy {
+                width: auto;
+                position: relative;
+                font-size: 2.5em;
+                height: auto;
+                display: flex;
+                align-items: center;
+            }
+
+            .waviy .animate3D {
+                font-family: 'Alfa Slab One', cursive;
+                position: relative;
+                display: inline-block;
+                text-transform: uppercase;
+                animation: waviy 1s infinite;
+                animation-delay: calc(.1s * var(--i));
+            }
+
+            .waviy .animateAI {
+                font-family: 'Alfa Slab One', cursive;
+                position: relative;
+                display: inline-block;
+                text-transform: uppercase;
+                animation: waviy 3s infinite;
+                animation-delay: calc(.1s * var(--i));
+            }
+
+            .waviy .animateW3 {
+                font-family: 'Alfa Slab One', cursive;
+                position: relative;
+                display: inline-block;
+                text-transform: uppercase;
+                animation: waviy 1.7s infinite;
+                animation-delay: calc(.1s * var(--i));
+            }
+            @keyframes waviy {
+                0%,40%,100% {
+                    transform: translateY(0)
+                }
+                20% {
+                    transform: translateY(-20px)
+                }
+            }
+        </style>
+        <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/80729/helpers.css" data-inprogress="">
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed:700);
+            .containera {
+                position: relative;
+                width: fit-content;
+                padding: 10px;
+            }
+
+            .h2a {
+                font-weight: 900;
+                text-transform: uppercase;
+                font-size: 110px !important;
+                letter-spacing: -0.05em;
+                text-align: center;
+                line-height: 1 !important;
+                color: #013a52;
+                font-family: "Roboto Condensed", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+                transform-origin: center bottom;
+                transition: all 0.4s;
+                margin: 0 !important;
+            }
+            .h2a:first-of-type {
+                transform-origin: center top;
+            }
+            .containera:hover .h2a {
+                transform: scaleY(0);
+            }
+
+            .text {
+                position: absolute;
+                font-family: "Open Sans";
+                transform: translateY(-100%);
+                transition: all 0.3s;
+                width: inherit;
+            }
+            .text:before, .text:after {
+                display: flex;
+                margin: 50px 0;
+                height: 10px;
+                background: linear-gradient(to right, #00fcff, #00ff72);
+                opacity: 0.75;
+                content: "";
+                transition: all 0.3s;
+                width: inherit;
+            }
+            /*linear-gradient(to right, #00302c, #ffb100);*/
+            .text:hover {
+                background: white;
+            }
+            .text:hover:before, .text:hover:after {
+                margin: 0;
+            }
+
+            .inner {
+                padding: 0 60px;
+                max-height: 0;
+                overflow: auto;
+                background: white;
+                line-height: 1.5;
+                font-size: 18px;
+                font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+                transform: scale(0);
+                transition: all 0.3s;
+                display: grid;
+                direction: ltr;
+                grid-template-columns: 25% 25% 25% 25%;
+                width: 100%;
+            }
+            .containera:hover .text .inner {
+                padding: 60px;
+                max-height: 300px;
+                transform: scale(1);
+            }
+            .containera-img {
+                width: 80%;
+            }
+            .inner div{
+                display: flex;
+                align-items:  center;
+                justify-content: center;
+                flex-direction: column;
+                filter: drop-shadow(2px 2px 3px black);
+            }
+            .inner div:hover{
+                filter: none;
+            }
+            .inner div h6{
+                margin-top: 1em;
+                font-size: 0.5em;
+                color: #013a52;
+            }
+        </style>
+        <style>
+            .gallery {
+                display: flex;
+                flex-wrap: wrap;
+                /* Compensate for excess margin on outer gallery flex items */
+                margin: -1rem -1rem;
+            }
+
+            .gallery-item {
+                /* Minimum width of 24rem and grow to fit available space */
+                flex: 1 0 24rem;
+                /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+                margin: 1rem;
+                box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+                overflow: hidden;
+            }
+
+            .gallery-image {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 400ms ease-out;
+            }
+
+            .gallery-image:hover {
+                transform: scale(1.15);
+            }
+
+            /*
+            
+            The following rule will only run if your browser supports CSS grid.
+            
+            Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+            
+            */
+
+            @supports (display: grid) {
+                .gallery {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+                    grid-gap: 2rem;
+                }
+
+                .gallery,
+                .gallery-item {
+                    margin: 0;
+                }
+            }
+        </style>
+        <script>
+            window.console = window.console || function (t) {};
+        </script>
+        <script>
+            if (document.location.search.match(/type=embed/gi)) {
+                window.parent.postMessage("resize", "*");
+            }
+        </script>
+    </head>
+    <body class="overflowF">
+        <div id="nav-bar-container">
+            <nav class="sticky">
+                <div><a href="index.html"><i style="font-size: 1em;" class="fa fa-user-secret fa-lg"></i><h6 style="margin: 0;">&nbsp;Me</h6></a></div><!-- Me / home button -->
+                <div><a href="Gallery.html"><i class="fas fa-image"></i><h6 style="margin: 0;">&nbsp;Gallery</h6> </a></div><!-- project button -->
+                <div><a href="resume.html"><i style="font-size: 1em;" class="fa fa fa-star fa-lg"></i><h6 style="margin: 0;">&nbsp;Others</h6></a></div><!-- achievement button -->
+            </nav>
+        </div>
+        <div class="backgroundImg"></div>
+        <div style="width: 100%;height: 200vh;position: relative;">
+
+
+            <div class="main-gallery-container">
+                <div class="firstpage">
+                    <a class="cardFlip" href="#!">
+                        <div class="front">
+
+                            <p class="animate-charcter3D">3D</p>
+                        </div>
+                        <div class="back">
+                            <img src="asset/3d.jpg" style="width: 100%;height: 100%;object-fit: cover;position: fixed;" alt="alt">
+                            <div style="z-index: 2;">
+                                <p>From hobby to passion,I just like 3D modeling that much </p>
+                                <p>to see my past project </p>
+                                <div class="button">
+                                    <div id="one" class="button3D">click here</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="cardFlip" href="#!">
+                        <div class="front">
+
+                            <p class="animate-charcterAI">A.I</p>
+                        </div>
+                        <div class="back">
+                            <img src="asset/AI2.png" style="width: 100%;height: 100%;object-fit: cover;position: fixed;" alt="alt">
+                            <div style="z-index: 2;">
+
+                                <p>Main specialization of study at University of Malaya</p>
+                                <div class="button">
+                                    <div id="one" class="buttonAI">analyze the codes</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="cardFlip" href="#!">
+                        <div class="front">
+                            <p class="animate-charcterART">W3</p>
+                        </div>
+                        <div class="back">
+                            <img src="asset/W3/cardback.jpg" style="width: 100%;height: 100%;object-fit: cover;position: fixed;" alt="alt">
+                            <div style="z-index: 2;">
+
+                                <p>Versatile and easy to learn or work with,my first choice to develop an app or website</p>
+                                <p>focuses on front end development</p>
+                                <div class="button">
+                                    <div id="one" class="buttonW3">developed sites</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="space">
+                <div class="containerAtSpace reveal">
+                    <span id="text1" style="opacity: 0.213249; filter: blur(100px);">a Call</span>
+                    <span id="text2" style="opacity: 0.991546; filter: blur(0.171604px);">:)</span>
+                </div>
+
+                <svg id="filters" style="height: 20%;">
+                <defs>
+                <filter id="threshold">
+                    <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                                   0 1 0 0 0
+                                   0 0 1 0 0
+                                   0 0 0 255 -140"></feColorMatrix>
+                </filter>
+                </defs>
+                </svg>
+
+                <script>
+                    const elts = {
+                        text1: document.getElementById("text1"),
+                        text2: document.getElementById("text2")
+                    };
+
+                    const texts = [
+                        "If",
+                        "You",
+                        "Like",
+                        "It",
+                        "Please",
+                        "Give Me",
+                        "a Call",
+                        "Or",
+                        "DM",
+                        "via My Email",
+                        "or Social Media",
+                        ":)",
+                        "by @Fazreilie"
+                    ];
+
+                    const morphTime = 1;
+                    const cooldownTime = 0.25;
+
+                    let textIndex = texts.length - 1;
+                    let time = new Date();
+                    let morph = 0;
+                    let cooldown = cooldownTime;
+
+                    elts.text1.textContent = texts[textIndex % texts.length];
+                    elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+
+                    function doMorph() {
+                        morph -= cooldown;
+                        cooldown = 0;
+
+                        let fraction = morph / morphTime;
+
+                        if (fraction > 1) {
+                            cooldown = cooldownTime;
+                            fraction = 1;
+                        }
+
+                        setMorph(fraction);
+                    }
+
+                    function setMorph(fraction) {
+                        elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+                        elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+                        fraction = 1 - fraction;
+                        elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+                        elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+                        elts.text1.textContent = texts[textIndex % texts.length];
+                        elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+                    }
+
+                    function doCooldown() {
+                        morph = 0;
+
+                        elts.text2.style.filter = "";
+                        elts.text2.style.opacity = "100%";
+
+                        elts.text1.style.filter = "";
+                        elts.text1.style.opacity = "0%";
+                    }
+
+                    function animate() {
+                        requestAnimationFrame(animate);
+
+                        let newTime = new Date();
+                        let shouldIncrementIndex = cooldown > 0;
+                        let dt = (newTime - time) / 1000;
+                        time = newTime;
+
+                        cooldown -= dt;
+
+                        if (cooldown <= 0) {
+                            if (shouldIncrementIndex) {
+                                textIndex++;
+                            }
+
+                            doMorph();
+                        } else {
+                            doCooldown();
+                        }
+                    }
+
+                    animate();
+                </script>
+
+            </div>
+
+
+        </div>
+        <!--3D-->
+        <div id="modal-container3D" class="two out">
+            <div class="modal-background">
+                <div class="close"></div>
+
+                <div class="modal overflowF smoothScroll" style="overflow-y: scroll;">
+                    <div class="top-title-container margin-bottom" style="background-image: url(asset/3D/background2.png);background-repeat: no-repeat;background-size: cover;border-radius: 1em">
+                        <div class="waviy margin-left">
+                            <span class="gradient-text-3D animate3D" style="--i:1">3</span>
+                            <span class="gradient-text-3D animate3D" style="--i:2">D</span>
+                            <span style="width: 0.5em;"></span>
+                            <span class="gradient-text-3D animate3D" style="--i:3">M</span>
+                            <span class="gradient-text-3D animate3D" style="--i:4">O</span>
+                            <span class="gradient-text-3D animate3D" style="--i:5">D</span>
+                            <span class="gradient-text-3D animate3D" style="--i:6">E</span>
+                            <span class="gradient-text-3D animate3D" style="--i:7">L</span>
+                            <span class="gradient-text-3D animate3D" style="--i:8">I</span>
+                            <span class="gradient-text-3D animate3D" style="--i:9">N</span>
+                            <span class="gradient-text-3D animate3D" style="--i:10">G</span>
+                        </div>
+                        <br>
+                        <div class="margin-left">
+                            <a href="#3Dsoftware"><button class="btn btn-primary btn-lg" type="button">Software</button></a>
+                            <a href="#3Dgallery"><button type="button" class="btn btn-secondary btn-lg">Project Gallery</button></a>
+                        </div>
+                    </div>
+                    <div id="3Dsoftware" style="width: 100%;
+                         height: 70%;
+                         display: flex;
+                         align-items: center;
+                         justify-content: center;">
+                        <div class="containera">
+                            <h2 class="h2a" style="color: #721174;">Software</h2>
+                            <h2 class="h2a" style="color: #721174;">Of Choice</h2>
+                            <div style="width: 100%;display: flex;">
+                                <div class="text overflowF">
+                                    <div class="inner">
+                                        <div>
+                                            <img  class="containera-img" src="asset/3D/icons8-autodesk-fusion-360-240.png" alt="Autodesk Fusion 360"/>
+                                            <h6>FUSION 360</h6>
+                                        </div>
+                                        <div>
+                                            <img  class="containera-img" src="asset/3D/icons8-autodesk-maya-480.png" alt="Autodesk Maya"/>
+                                            <h6>MAYA</h6>
+                                        </div>
+                                        <div>
+                                            <img  class="containera-img" src="asset/3D/alias-icon-128px-hd.png" alt="Autodesk Alias"/>
+                                            <h6>ALIAS</h6>
+                                        </div>
+                                        <div>
+                                            <img  class="containera-img" src="asset/3D/1496654472_vred-pro.png" alt="Autodesk VRED"/>
+                                            <h6>VRED</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div id="3Dgallery" class="3Dgallery" style="width: 100%;display: flex;height: auto;">
+                        <div style="width: 100%;height: auto;display: flex;flex-direction: column;align-items: center;">
+                            <h3 style="font-size: 3em;font-weight: bold;margin-top: 1em;margin-bottom: 1em;color: #013a52;">PAST PROJECT</h3>
+                            <div style="padding: 1em;width: 100%;height: auto;">
+                                <div class="gallery">
+
+                                    <div class="gallery-item">
+                                        <img class="gallery-image" src="asset/3D/Thousand Sunny/park-sae-rei-lee-final2.jpg" alt="">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img class="gallery-image" src="asset/3D/Thousand Sunny/park-sae-rei-lee-sunny-finish.jpg" alt="">
+                                    </div>
+
+                                    <div class="gallery-item">
+                                        <img class="gallery-image" src="asset/3D/Sitech Dev Singapore/photo_2021-12-03_23-07-36.jpg" alt="">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img class="gallery-image" src="asset/3D/Sitech Dev Singapore/photo_2021-12-03_23-07-41.jpg" alt="">
+                                    </div>
+
+                                    <div class="gallery-item">
+                                        <img class="gallery-image" src="asset/3D/Car Seat/1.png" alt="">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img class="gallery-image" src="asset/3D/Car Seat/5.png" alt="">
+                                    </div>
+
+                                    <div class="gallery-item">
+                                        <img class="gallery-image" src="asset/3D/Car Seat/Black Design 3.png" alt="">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img class="gallery-image" src="asset/3D/Car Seat/Brown design 5.png" alt="">
+                                    </div>
+                                    <!--                                    
+                                                                        <div class="gallery-item">
+                                                                            <img class="gallery-image" src="asset/3D/Interior Design and Architecture/park-sae-rei-lee-picsart-12-24-09-55-16.jpg" alt="">
+                                                                        </div>
+                                                                        <div class="gallery-item">
+                                                                            <img class="gallery-image" src="asset/3D/Interior Design and Architecture/park-sae-rei-lee-picsart-12-24-09-56-25.jpg" alt="">
+                                                                        </div>-->
+
+                                    <div class="gallery-item">
+                                        <img class="gallery-image" src="asset/3D/Interior Design and Architecture/park-sae-rei-lee-untitled-v1.jpg" alt="">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img class="gallery-image" src="asset/3D/Interior Design and Architecture/park-sae-rei-lee-picsart-12-26-12-32-00.jpg" alt="">
+                                    </div>
+
+                                    <div class="gallery-item">
+                                        <img class="gallery-image" src="asset/3D/Ring Design/park-sae-rei-lee-img-20201003-065959-808.jpg" alt="">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img class="gallery-image" src="asset/3D/Ring Design/park-sae-rei-lee-1cincind1.jpg" alt="">
+                                    </div>
+
+                                    <div class="gallery-item">
+                                        <img class="gallery-image" src="asset/3D/Ring Design/park-sae-rei-lee-3ringcasepic.jpg" alt="">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img class="gallery-image" src="asset/3D/Ring Design/park-sae-rei-lee-3ringd3.jpg" alt="">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<p>Hear me roar.</p>-->
+
+                </div>
+            </div>
+        </div>
+        <!--AI-->
+        <div id="modal-containerAI" class="two out">
+            <div class="modal-background">
+                <div class="close"></div>
+                <div class="modal overflowF smoothScroll">
+                    <div class="top-title-container" style="background-image: linear-gradient(135deg, #d9d6d6, #cbcbcb,rgb(255 255 255),#dfdfdf,#afaaaa);border-radius: 1em">
+                        <div style="position: absolute;right: 0;font-family: 'Roboto';display: flex;justify-content: center;width : 100%">
+                            <div class="AIheadings AIheadings-first">Artificial Intelligence</div> 
+                            <div class="AIheadings AIheadings-last"> 
+                                <span>Future of World</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="learnedTechniques" style="position: absolute;bottom: 0.5em;display: flex;width: 100%;justify-content: center;">
+                            <a href="#learnedTechniques"><button class="btn btn-outline-secondary btn-lg" style="margin:0.2em;" type="button">Learned Techniques</button></a>
+                            <a href="#codeSample"><button type="button" class="btn btn-outline-secondary btn-lg" style="margin:0.2em;" >Code Samples</button></a>
+                        </div>
+                    </div>
+
+
+                    <div style="width: 100%;
+                         height: 70%;
+                         display: flex;
+                         align-items: center;
+                         justify-content: center;
+                         margin-top: 3em;">
+                        <div class="containera">
+                            <h2 class="h2a" style="color: #747474;">A.I TECHNIQUES</h2>
+                            <h2 class="h2a" style="color: #747474;">LEARNED</h2>
+                            <div style="width: 100%;display: flex;">
+                                <div class="text overflowF">
+                                    <div class="inner">
+                                        <div>
+                                            <img  class="containera-img" style="filter: invert(16%) sepia(32%) saturate(2936%) hue-rotate(169deg) brightness(94%) contrast(99%);" src="asset/AI/ML.png" alt="Machine Learning"/>
+                                            <h6>Machine Learning</h6>
+                                        </div>
+                                        <div>
+                                            <img  class="containera-img" style="filter: invert(16%) sepia(32%) saturate(2936%) hue-rotate(169deg) brightness(94%) contrast(99%);" src="asset/AI/Fuzzy.png" alt="Fuzzy Logic"/>
+                                            <h6>Fuzzy Logic</h6>
+                                        </div>
+                                        <div>
+                                            <img  class="containera-img" style="filter: invert(16%) sepia(32%) saturate(2936%) hue-rotate(169deg) brightness(94%) contrast(99%);" src="asset/AI/Expert_System-512.png" alt="Expert System"/>
+                                            <h6>Expert System</h6>
+                                        </div>
+                                        <div>
+                                            <img  class="containera-img" style="filter: invert(16%) sepia(32%) saturate(2936%) hue-rotate(169deg) brightness(94%) contrast(99%);" src="asset/AI/Python.webp" alt="Functional Logic Programming with Python"/>
+                                            <h6>Functional Logic</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr style="margin-bottom: 0;">
+                    <div id="codeSample">
+                        <div class="web-container">
+                            <div style="margin-bottom: 2vh;width: 90%;height: 80vh;display: grid;grid-template-columns: 19% 1% 80%;padding-top: 1em;color: #747474;">
+                                <div class="AI-nav" style="">
+                                    <ul>
+                                        <li><button id="switchTrainingLevelFLS">Training Level FLS</button></li>
+                                        <li><button id="switchMLAcademicProject">Machine Learning Academic Project</button></li>
+                                        <li><button id="switchMaInvestmentAnalyser">Ma Investment Analyser</button></li>
+                                    </ul>
+                                </div>
+                                <div style="background-color: black;width: 11%;display: flex;margin-left: 89%;"></div>
+                                <div style="background-color: #3e3e3e1f;margin-left: 1em;padding: 1.5em;">
+                                    <div id="Training-Level-FLS">
+                                        <div style='width: 60%;height: 56.9%;position: relative;overflow: hidden;'>
+                                            <iframe class="responsive-iframe" src="asset/AI/FL_GroupProjectVideo.mp4"></iframe>
+                                        </div>
+                                        <a href="asset/AI/Exercise level FLS.ipynb" download="Fazreilie's team Training Level FLS"><img src="asset/AI/pythonFile.png" alt="Python File Icon"/><h6>Training Level FLS.ipynb</h6></a>
+                                    </div>
+                                    <div id="MLAcademicProject">
+                                        <a href="asset/AI/MLProject.ipynb" download="Fazreilie's team ML Academic Project"><img src="asset/AI/pythonFile.png" alt="Python File Icon"/><h6>MLProject.ipynb</h6></a>
+                                    </div>
+                                    <div id='MaInvestmentAnalyser'>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-containerW3" class="two out">
+            <div class="modal-background">
+                <div class="close"></div>
+                <div class="modal overflowF smoothScroll">
+                    <div class="top-title-container" style="background-image: url(asset/W3/background.jpg);background-repeat: no-repeat;background-size: cover;border-radius: 1em">
+                        <div class="waviy margin-left">
+                            <span class="gradient-text-W3 animateW3" style="--i:1">W</span>
+                            <span class="gradient-text-W3 animateW3" style="--i:2">E</span>
+                            <span class="gradient-text-W3 animateW3" style="--i:3">B</span>
+                            <span style="width: 0.5em;"></span>
+                            <span class="gradient-text-W3 animateW3" style="--i:4">D</span>
+                            <span class="gradient-text-W3 animateW3" style="--i:5">E</span>
+                            <span class="gradient-text-W3 animateW3" style="--i:6">V</span>
+                            <span class="gradient-text-W3 animateW3" style="--i:7">E</span>
+                            <span class="gradient-text-W3 animateW3" style="--i:8">L</span>
+                            <span class="gradient-text-W3 animateW3" style="--i:9">O</span>
+                            <span class="gradient-text-W3 animateW3" style="--i:10">P</span>
+                            <span class="gradient-text-W3 animateW3" style="--i:11">M</span>
+                            <span class="gradient-text-W3 animateW3" style="--i:12">E</span>
+                            <span class="gradient-text-W3 animateW3" style="--i:13">N</span>
+                            <span class="gradient-text-W3 animateW3" style="--i:14">T</span>
+                        </div>
+                        <br>
+                        <div class="margin-left">
+                            <a href="#W3Language"><button class="btn btn-primary btn-lg" type="button">Language</button></a>
+                            <a href="#developedWebsite-container"><button type="button" class="btn btn-secondary btn-lg">Developed Website</button></a>
+                        </div>
+
+                        <div class="word"></div>
+                    </div>
+                    <div id="W3Language" style="width: 100%;
+                         height: 70%;
+                         display: flex;
+                         align-items: center;
+                         justify-content: center;">
+                        <div class="containera">
+                            <h2 class="h2a">Flexible</h2>
+                            <h2 class="h2a">With</h2>
+                            <div style="width: 100%;display: flex;">
+                                <div class="text overflowF">
+                                    <div class="inner" style="grid-template-columns: 25% 25% 25% 25%">
+                                        <div>
+                                            <img  class="containera-img" src="asset/W3/HTML.png" alt="HyperText Markup Language"/>
+                                            <h6>HTML</h6>
+                                        </div>
+                                        <div>
+                                            <img  class="containera-img" src="asset/W3/CSS.png" alt="Cascading Style Sheet"/>
+                                            <h6>CSS</h6>
+                                        </div>
+                                        <div>
+                                            <img  class="containera-img" src="asset/W3/javascript-icon-png-23.jpg" alt="Javascript"/>
+                                            <h6>JAVASCRIPT</h6>
+                                        </div>
+                                        <div>
+                                            <img  class="containera-img" src="asset/W3/29540.png" alt="JSP"/>
+                                            <h6>JSP</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div id="developedWebsite-container">
+                        <div class="developedWebsite-title-container">
+                            <h2>Developed Sites</h2>
+                        </div>
+                        <div class="developedWebsite-nav-bar">
+                            <ul>
+                                <li><button id="switchMaflixi">Maflixi.com</button></li>
+                                <li><button id="switchGreenDeals">GreenDeals.com</button></li>
+                                <li><button id="switchMaPortfolio">MaPortfolio.com</button></li>
+                            </ul>
+                        </div>
+                        <div id="Maflixi">
+                            <div class="web-container">
+                                <div style="width: 90%;height: auto;">
+                                    <div class="vid-container">
+                                        <iframe class="responsive-iframe" src="asset/W3/MAFLIXI/MAFLIXI LOGIN PAGE.mp4"></iframe>
+                                    </div>
+                                    <div class="gallery-web">
+                                        <img class="gallery-image-web" src="asset/W3/MAFLIXI/LoginPage.png" alt="">
+                                        <img class="gallery-image-web" src="asset/W3/MAFLIXI/Home2.png" alt="">
+                                        <img class="gallery-image-web" src="asset/W3/MAFLIXI/Home1.png" alt="">
+                                        <img class="gallery-image-web" src="asset/W3/MAFLIXI/Series.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="MaPortfolio">
+                            <div class="web-container">
+                                <div style="width: 90%;height: auto;">
+                                    <h5 style="font-size: 0.83em;    background-color: rgb(127 255 212 / 55%);padding: 2em;border-radius: 2em;
+                                        }">
+                                        My Official Portfolio Website that you are accessing right now.Developed fully on HTML, CSS, and javascript.
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="GreenDeals">
+                            <div class="web-container">
+                                <div style="width: 90%;height: auto;">
+                                    <video style="width: 100%;height: auto;" controls autoplay>
+                                        <source src="asset/W3/GREENDEALS/video_2022-04-21_14-34-57.mp4" type="video/mp4">
+                                        <source src="asset/W3/GREENDEALS/video_2022-04-21_14-34-57.mp4" type="video/ogg">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div class="gallery-web">
+                                        <img class="gallery-image-web" src="asset/W3/GREENDEALS/webscrapping with Java.png" alt="">
+                                    </div>
+                                    <div class="gallery-web">
+                                        <img class="gallery-image-web" src="asset/W3/GREENDEALS/JSONcleantechnica.png" alt="">
+                                        <img class="gallery-image-web" src="asset/W3/GREENDEALS/JSONtreehugger.png" alt="">
+                                        <img class="gallery-image-web" src="asset/W3/GREENDEALS/JSONgreenerideal.png" alt="">
+                                    </div>
+                                    <a href="https://docs.google.com/document/d/18Imlv2jVBntyRKHlwhuAqQqxgI89ULCp/edit?usp=sharing&ouid=102047351652922107692&rtpof=true&sd=true" target="_blank">click here to see project report</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--                    <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+                                        <rect x="0" y="0" fill="none" width="226" height="162" rx="3" ry="3"></rect>
+                                        </svg>-->
+
+
+                    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                    <script>
+                    var words = ['<h1>Hi i like HTML</h1>', '<h1>I also like css</h1>', '<h2>I\'m still learning how to develop a game</h2>', '<h2>More specifically on Augmented Reality</h2>'],
+                            part,
+                            i = 0,
+                            offset = 0,
+                            len = words.length,
+                            forwards = true,
+                            skip_count = 0,
+                            skip_delay = 15,
+                            speed = 70;
+                    var wordflick = function () {
+                        setInterval(function () {
+                            if (forwards) {
+                                if (offset >= words[i].length) {
+                                    ++skip_count;
+                                    if (skip_count == skip_delay) {
+                                        forwards = false;
+                                        skip_count = 0;
+                                    }
+                                }
+                            } else {
+                                if (offset == 0) {
+                                    forwards = true;
+                                    i++;
+                                    offset = 0;
+                                    if (i >= len) {
+                                        i = 0;
+                                    }
+                                }
+                            }
+                            part = words[i].substr(0, offset);
+                            if (skip_count == 0) {
+                                if (forwards) {
+                                    offset++;
+                                } else {
+                                    offset--;
+                                }
+                            }
+                            $('.word').text(part);
+                        }, speed);
+                    };
+
+                    $(document).ready(function () {
+                        wordflick();
+                    });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script>
+                    $('.button3D').click(function () {
+                        var buttonId = $(this).attr('id');
+                        $('#modal-container3D').removeAttr('class').addClass(buttonId);
+                        $('body').addClass('modal-active');
+                    });
+
+                    //# sourceURL=pen.js
+        </script>
+        <script>
+            $('.buttonAI').click(function () {
+                var buttonId = $(this).attr('id');
+                $('#modal-containerAI').removeAttr('class').addClass(buttonId);
+                $('body').addClass('modal-active');
+            });
+            //# sourceURL=pen.js
+        </script>
+        <script>
+            $('.buttonW3').click(function () {
+                var buttonId = $(this).attr('id');
+                $('#modal-containerW3').removeAttr('class').addClass(buttonId);
+                $('body').addClass('modal-active');
+            });
+//            close modal
+            $('.close').click(function () {
+                $(this).parent().parent().addClass('out');
+                $('body').removeClass('modal-active');
+            });
+            //# sourceURL=pen.js
+        </script>
+
+        <footer>
+            <div style="width: 80%;">
+                <div class="footer-container">
+                    <div class="top-foot">
+                        <div class="left-foot">
+                            <div class="address-container">
+                                <h6>KILANG SAWIT DUMPAS</h6>
+                                <h6>KM44 JALAN UMAS KALABAKAN</h6>
+                                <h6>WDT 82</h6>
+                                <h6>91000 TAWAU</h6>
+                                <h6 style="margin-bottom: 2vh">SABAH</h6>
+                                <h6>email :fastraylee@gmail.com</h6>
+                                <h6>tel   :011-35780112</h6>
+                            </div>
+                            <div class="social-media-container">
+                                <div><a><i class="fab fa-linkedin"></i></a></div>
+                                <div><a class="upwork-icon-footer" style="max-width: 4.5vh;min-width: 4.5vh;display: flex;justify-content: center;height: min-content;filter: invert(82%) sepia(0%) saturate(961%) hue-rotate(137deg) brightness(83%) contrast(91%);"><img src="asset/style/Upwork.png" alt="Upwork.com"></a></div>
+                                <div><a><i class="fab fa-github"></i></a></div>
+                                <div><a><i class="fab fa-artstation"></i></a></div>
+                            </div>
+                        </div><!-- comment -->
+                        <div class="vertical1"><div></div></div>
+                        <div class="right-foot">
+                            <div class="sitemap">
+                                <h5>Sitemap</h5>
+                                <h6><a href="index.html">me</a></h6>
+                                <h6><a href="Gallery.html">gallery</a></h6>
+                                <h6><a href="resume.html">others</a></h6>
+                            </div>
+                        </div><!-- comment -->
+                    </div>
+                </div>
+                <div style="width: 100%;height: auto;">
+                    <div style="width: 100%;border-top: 2px solid rgb(128 128 128 / 50%);"></div>
+                </div>
+                <div class="low-foot"><h5 style="margin: 0 0 4px 0;">@2022 by FAZREILIE BIN ALEP</h5></div>
+            </div>
+        </footer>
+    </body>
+    <!--<script>$("body").removeClass("hidden");</script>-->
+</html>
+<style>
+    .content2{
+        width: 100%;
+        height: 70vh;
+        background-color: rgba(169, 180, 204, 1);
+    }
+    .backgroundImg{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background-image: url(D:/MyApp/MaPortfolio/public_html/asset/mclaren-mso-x-front-view.jpg);
+        background-position: center;
+        -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,3));
+        position: absolute;
+    }
+    .space{
+        width: 100%;
+        height: 100vh;
+    }
+    .firstpage{
+        width: 70%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        align-content: center;
+        justify-items: center
+    }
+    .cardFlip {
+        color: aliceblue;
+        cursor: pointer;
+        width: 70%;
+        min-width: 30%;
+        height: 400px;
+        min-height: 400px;
+        perspective: 1000px;
+        position: relative;
+    }
+    @media screen and (max-width: 800px) {
+        .cardFlip {
+            width: calc(50% - 2rem);
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .cardFlip {
+            width: 100%;
+        }
+    }
+
+    .front,
+    .back {
+        display: flex;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        transition: ease-in-out 600ms;
+    }
+    .back div p{
+        margin: 1em 0.5em;
+        color: aliceblue;
+    }
+
+    .front {
+        background-size: cover;
+        font-size: 5rem;
+        font-weight: 600;
+        color: darkred;
+        overflow: hidden;
+        background-color: rgba(255, 235, 205, 0.6);
+        border-radius: 0.3em;
+    }
+    .front:before {
+        position: absolute;
+        display: block;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, #1a9be6, #1a57e6);
+        opacity: 0.25;
+        z-index: -1;
+    }
+    .cardFlip:hover .front {
+        transform: rotateY(180deg);
+    }
+    .cardFlip:nth-child(even):hover .front {
+        transform: rotateY(-180deg);
+    }
+
+    .back {
+        background: #fff;
+        transform: rotateY(-180deg);
+        border-radius: 1.7em;
+    }
+    .back img{
+        border-radius: 1.7em;
+        filter: brightness(0.5);
+    }
+
+    .back .button {
+        background: linear-gradient(135deg, #1a9be6, #1a57e6);
+        background: linear-gradient(135deg, #1a9be6, #1a57e6);
+        color: #ffb100;
+        font-weight: bold;
+        font-size: large;
+    }
+    .back .button:hover{
+        background: red !important;
+    }
+    .back .button:hover div{
+        color: black;
+    }
+    .cardFlip:hover .back {
+        transform: rotateY(0deg);
+    }
+    .cardFlip:nth-child(even) .back {
+        transform: rotateY(180deg);
+    }
+    /*    .card:nth-child(even) .back .button {
+            background: linear-gradient(135deg, #e61a80, #e61a3c);
+        }*/
+    .cardFlip:nth-child(even) .back .button:before {
+        box-shadow: 0 0 10px 10px rgba(230, 26, 60, 0.25);
+        /*background-color: rgba(230, 26, 60, 0.25);*/
+    }
+    .cardFlip:nth-child(even):hover .back {
+        transform: rotateY(0deg);
+    }
+
+    .button {
+        transform: translateZ(40px);
+        cursor: pointer;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        font-weight: bold;
+        color: #fff;
+        padding: 0.5em 1em;
+        border-radius: 100px;
+        font: inherit;
+        border: none;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: 300ms ease;
+        box-sizing: border-box;
+        margin: 0 0.5em 0 0.5em;
+    }
+    .animate-charcter3D{
+        text-transform: uppercase;
+        background-image: linear-gradient(
+            -225deg,
+            #231557 0%,
+            #44107a 29%,
+            #ff1361 67%,
+            #fff800 100%
+            );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+        font-size: 100%;
+    }
+
+    @keyframes textclip {
+        to {
+            background-position: 200% center;
+        }
+    }
+    .animate-charcterAI{
+        text-transform: uppercase;
+        background-image: linear-gradient( -90deg, #b7b7b3 0%, #5c5562 29%, #000000 67%, #b7b7b3 100% );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+        font-size: 100%;
+    }
+
+    @keyframes textclip {
+        to {
+            background-position: 200% center;
+        }
+    }
+    .animate-charcterART{
+        text-transform: uppercase;
+        background-image: linear-gradient( 95deg, #ef6d00 0%, #6e3800 29%, #4e3601 67%, #ef6d00 100% );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+        font-size: 100%;
+    }
+
+    @keyframes textclip {
+        to {
+            background-position: 200% center;
+        }
+    }
+
+    .word {
+        font-family: 'tahoma';
+        position: absolute;
+        color: #d5cdcd;
+        width: 100%;
+        height: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #333;
+        bottom: 0;
+        margin: auto;
+        color: white;
+        text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+        box-shadow: -2px -5px 11px 4px #544b4b;
+    }
+    .3Dgallery h2,.3Dgallery h3{
+        font-weight: bold;
+        color: #013a52;
+        width: 100%;
+    }
+    .top-title-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        font-size: x-large;
+        font-weight: bold;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 2px 5px 11px 4px #888888;
+    }
+    .gradient-text-3D{
+        background: -webkit-linear-gradient(#efff0c, #9b7200);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .gradient-text-AI{
+        background: -webkit-linear-gradient(#000, #464545, #6e6c6c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .gradient-text-W3{
+        background: -webkit-linear-gradient(#fbff00, #fbc690);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .btn{
+        font-family: cursive;
+        width: auto;
+    }
+    .hr{
+        height: 0.3em !important;
+        width: 90% !important;
+        margin: 0 !important;
+    }
+    .margin-left{
+        margin-left: 2%;
+    }
+    .margin-bottom{
+        margin-bottom: 5%;
+    }
+    .margin-top{
+        margin-top: 5%;
+    }
+    /*.hidden{display: none}*/
+</style>
+<style>
+    #switchMaflixi,#switchMaPortfolio,#switchGreenDeals{
+        all: unset;
+        cursor: pointer;
+        margin: 0.5em;
+        border-bottom: none;
+    }
+    #switchMaflixi{
+        border-bottom:  0.15em solid black;
+    }
+    #switchMaflixi:hover,#switchMaPortfolio:hover,#switchGreenDeals:hover{
+        color: #555;
+    }
+    .developedWebsite-nav-bar ul{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .developedWebsite-content-container{
+        width: 100%;
+    }
+    .Intro{
+        height: 80vh;
+        width: 100%;
+    }
+
+    #Maflixi,#GreenDeals,#MaPortfolio{
+
+        height: auto;
+        width: 100%;
+        border-bottom: 0.15em solid black;
+        box-sizing: border-box;
+        padding: 4em;
+    }
+    #Maflixi{
+        display: block;
+    }
+    #MaPortfolio{
+        display: none;
+    }
+    #GreenDeals{
+        display: none;
+    }
+    .web-container{
+        display: flex;
+        height: auto;
+        width: 100%;
+        justify-content: center;
+    }
+</style>
+<style>
+    .vid-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    }
+
+    /* Then style the iframe to fit in the container div with full height and width */
+    .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .gallery-image-web{
+        width: 100%;
+        height: auto;
+    }
+    .gallery-web{
+        display: grid;
+        grid-template-columns: 49.5% 49.5%;
+        grid-template-rows: auto auto;
+        grid-gap: 1% 1%;
+    }
+
+    .AI-nav{
+        display: flex;
+        align-items: center;
+        text-align: end;
+    }
+    .AI-nav ul li button{
+        width: 100% !important;
+    }
+    #switchTrainingLevelFLS,#switchMLAcademicProject,#switchMaInvestmentAnalyser{
+        all: unset;
+        cursor: pointer;
+        border-bottom: none;
+    }
+    #switchTrainingLevelFLS{
+        background-color: #40fdeb59;
+    }
+    #switchMLAcademicProject{
+        background-color: white;
+    }
+    #switchMaInvestmentAnalyser{
+        background-color: white;
+    }
+    #switchTrainingLevelFLS:hover,#switchMLAcademicProject:hover,#switchMaInvestmentAnalyser:hover{
+        color: #555;
+    }
+    #Training-Level-FLS,#MLAcademicProject,#MaInvestmentAnalyser{
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    #Training-Level-FLS a h6,#MLAcademicProject a h6,#MaInvestmentAnalyser a h6{
+        color: black;
+    }
+    #Training-Level-FLS a,#MLAcademicProject a,#MaInvestmentAnalyser a{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+    #Training-Level-FLS a h6:hover,#MLAcademicProject a h6:hover,#MaInvestmentAnalyser a h6:hover{
+        color: gray;
+    }
+    #Training-Level-FLS a img,#MLAcademicProject a img,#MaInvestmentAnalyser a img{
+        width: 2em;
+        height: 2em;
+    }
+    #Training-Level-FLS{
+        display: flex;
+    }
+    #MLAcademicProject{
+        display: none;
+    }
+    #MaInvestmentAnalyser{
+        display: none
+    }
+</style>
+<style>
+    html {
+        visibility: visible;
+        opacity: 1;
+    }
+</style>

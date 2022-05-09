@@ -1,0 +1,198 @@
+<html id="others">
+    <head>
+        <title>Fazreilie's Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="asset/style/portfolio.css">
+        <link rel="stylesheet" type="text/css" href="asset/style/fontawesome-free-5.15.3-web/css/all.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+            .reveal{
+                position: relative;
+                transform: translateY(150px);
+                opacity: 0;
+                transition: 1s all ease;
+            }
+
+            .reveal.active{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        </style>
+        <script>
+            function reveal() {
+                var reveals = document.querySelectorAll(".reveal");
+                for (var i = 0; i < reveals.length; i++) {
+                    var windowHeight = window.innerHeight;
+                    var elementTop = reveals[i].getBoundingClientRect().top;
+                    var elementVisible = 150;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveals[i].classList.add("active");
+                    } else {
+                        reveals[i].classList.remove("active");
+                    }
+                }
+            }
+
+            window.addEventListener("scroll", reveal);
+            // To check the scroll position on page load
+            reveal();
+        </script>
+    </head>
+    <body class="overflowF">
+        <!--<header></header>-->
+        <div id="nav-bar-container">
+            <nav class="sticky">
+                <div><a href="index.html"><i style="font-size: 1em;" class="fa fa-user-secret fa-lg"></i><h6 style="margin: 0;">&nbsp;Me</h6></a></div><!-- Me / home button -->
+                <div><a href="Gallery.html"><i class="fas fa-image"></i><h6 style="margin: 0;">&nbsp;Gallery</h6> </a></div><!-- project button -->
+                <div><a href="resume.html"><i style="font-size: 1em;" class="fa fa fa-star fa-lg"></i><h6 style="margin: 0;">&nbsp;Others</h6></a></div><!-- achievement button -->
+            </nav>
+        </div>
+
+        <main class="main-grid-temp">
+            <div class="section-1"><!-- main grid 1 -->
+                <div class="main-profile"><!-- main profile -->
+                    <div id="overall"><!-- pictures and data --> 
+                        <div id="picture-section">
+                            <h4 id="pic-border">
+                                <img src="D:/MyApp/MaPortfolio/public_html/asset/hacker-icon_91638.png" alt="hacker icon">
+                            </h4>
+                            <div class="waviy" style="height: 2em;width: 100%;display: flex;flex-direction: row;justify-content: flex-start;padding-left: 1.5vw;">
+                                <span style="--i:1">F</span>
+                                <span style="--i:2">A</span>
+                                <span style="--i:3">Z</span>
+                                <span style="--i:4">R</span>
+                                <span style="--i:5">E</span>
+                                <span style="--i:6">I</span>
+                                <span style="--i:7">L</span>
+                                <span style="--i:8">I</span>
+                                <span style="--i:9">E</span>
+                                <span style="--i:10">_</span>
+                                <span style="--i:11">B</span>
+                                <span style="--i:12">I</span>
+                                <span style="--i:13">N</span>
+                                <span style="--i:14">_</span>
+                                <span style="--i:15">A</span>
+                                <span style="--i:16">L</span>
+                                <span style="--i:17">E</span>
+                                <span style="--i:18">P</span>
+                            </div>
+                            <h6 id="occupation" style="font-weight: 500">UM'S FSKTM STUDENT</h6>
+                        </div> <!--Picture--> 
+                    </div>
+                    <div id="about"> <!--about-->
+
+                    </div>
+                </div>
+                <div class="social"><!-- social -->
+                    <div><!-- Linkdn -->
+                        <a href="https://www.linkedin.com/in/fazreilie-alep1/" target="_blank" style="text-decoration: none;"><i class="fab fa-linkedin" style="font-size:48px;"></i></a>
+                    </div>
+                    <div> 
+                        <a href="https://www.upwork.com/freelancers/~018348a99c71d10500" target="_blank" class="upwork-icon" style="display: flex;justify-content: center;"><img src="asset/style/Upwork.png" alt="Upwork.com"></a> 
+                    </div>
+                    <div><!-- github -->
+                        <a href="https://github.com/ParkSaereilee" target="_blank" style="text-decoration: none;"><i class="fab fa-github" style="font-size: 48px;"></i></a>
+                    </div>
+                    <div> 
+                        <a href="https://www.artstation.com/mr_park" target="_blank" style="text-decoration: none;"><i class="fab fa-artstation" style="font-size: 48px;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-2">
+                <div>
+                    <div class="vid">
+                        <div class="vid-container">
+                            <iframe class="responsive-iframe" src="asset/video/One Punch.mp4" allow="autoplay; encrypted-media"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- main grid 2 , resume-->
+        </main>
+        <article class="reveal">
+            <br>
+            <div style="width: 100%; height: auto;display: flex;justify-content: center;">
+                <div class="horizonal-line"></div>
+            </div>
+            <br>
+            <br>
+
+            <h2 class="title">
+                <span class="title-word title-word-1">Thanks</span>
+                <span class="title-word title-word-2">For</span>
+                <span class="title-word title-word-3">Visiting</span>
+                <span class="title-word title-word-4">My</span>
+                <span class="title-word title-word-5">Site</span>
+            </h2>
+            <br>
+            <br>
+            <div style="width: 100%; height: auto;display: flex;justify-content: center;">
+                <div class="horizonal-line"></div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </article>
+        <footer>
+            <div style="width: 80%;">
+                <div class="footer-container">
+                    <div class="top-foot">
+                        <div class="left-foot">
+                            <div class="address-container">
+                                <h6>KILANG SAWIT DUMPAS</h6>
+                                <h6>KM44 JALAN UMAS KALABAKAN</h6>
+                                <h6>WDT 82</h6>
+                                <h6>91000 TAWAU</h6>
+                                <h6 style="margin-bottom: 2vh">SABAH</h6>
+                                <h6>email :fastraylee@gmail.com</h6>
+                                <h6>tel   :011-35780112</h6>
+                            </div>
+                            <div class="social-media-container">
+                                <div><a><i class="fab fa-linkedin"></i></a></div>
+                                <div><a class="upwork-icon-footer" style="max-width: 4.5vh;min-width: 4.5vh;display: flex;justify-content: center;height: min-content;filter: invert(82%) sepia(0%) saturate(961%) hue-rotate(137deg) brightness(83%) contrast(91%);"><img src="asset/style/Upwork.png" alt="Upwork.com"></a></div>
+                                <div><a><i class="fab fa-github"></i></a></div>
+                                <div><a><i class="fab fa-artstation"></i></a></div>
+                            </div>
+                        </div><!-- comment -->
+                        <div class="vertical1"><div></div></div>
+                        <div class="right-foot">
+                            <div class="sitemap">
+                                <h5>Sitemap</h5>
+                                <h6><a href="index.html">me</a></h6>
+                                <h6><a href="Gallery.html">gallery</a></h6>
+                                <h6><a href="resume.html">others</a></h6>
+                            </div>
+                        </div><!-- comment -->
+                    </div>
+                </div>
+                <div style="width: 100%;height: auto;">
+                    <div style="width: 100%;border-top: 2px solid rgb(128 128 128 / 50%);"></div>
+                </div>
+                <div class="low-foot"><h5 style="margin: 0 0 4px 0;">@2022 by FAZREILIE BIN ALEP</h5></div>
+            </div>
+        </footer>
+
+
+
+    </body>
+</html>
+<style>
+    .vid-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    }
+
+    /* Then style the iframe to fit in the container div with full height and width */
+    .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+</style>
