@@ -9,21 +9,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="asset/style/portfolio.css">
         <link rel="stylesheet" type="text/css" href="asset/style/fontawesome-free-5.15.3-web/css/all.css">
-        <style>
-            html,body,h1,h2,h3,h4,h5,h6 {
-                font-weight: 100!important;
-                font-family: 'Fredoka One'!important;
-            }
-            h6{
-                font-size: 0.67em;
-            }
-            h5{
-                font-size: 1em;
-            }
-            p {
-                font-family: Verdana,sans-serif !important;
-            }
-        </style>
     </head>
     <body class="" style="display:flex;flex-direction: column;align-items: center;">
         <div id="nav-bar-container">
@@ -35,7 +20,7 @@
         </div>
 
         <!-- Page Container -->
-        <div class="resume-container" style="max-width:1400px;padding-top: 1.5em;">
+        <div class="resume-container" style="width: 80%;">
 
             <!-- The Grid -->
             <div class="resume-grid">
@@ -112,7 +97,7 @@
                             <h5 class="graycolor text-weight-light"><b>Web Developer / greandeals.com</b></h5>
                             <h6 class="text-teal"><i class="fa fa-calendar fa-fw margin-right"></i>Oct 2021 - <span class="w3-tag w3-teal w3-round">March 2022</span></h6>
                             <p class="graycolor margin-left" style="font-size: smaller;">
-                                With the help of Java Libraries (ex:jaunt,JSON,Spring,etc),managed to scrap a data from various green site(greenerideal.com,treehugger.com,cleantechnica.com) related to green technology,save the scraped data to JSON files and then display the data to my Project Management team site,Greendeals.com I was responsible on designing the website User Interface and building the scrapping system.
+                                With the help of Java Libraries (ex:jaunt,JSON,Spring,etc),managed to scrap a data from various green site(greenerideal.com , treehugger.com , cleantechnica.com) related to green technology,save the scraped data to JSON files and then display the data to my Project Management team site,Greendeals.com I was responsible on designing the website User Interface and building the scrapping system.
                             </p>
                             <hr>
                         </div>
@@ -239,7 +224,7 @@
                 <div><a target="_blank" href="asset/RESULTS/Year 4,Sem 1.pdf" download="Fazreilie's Year 4 Sem 1 Result" style="pointer-events: none"><i style="color: gray;" class="fas fa-file"></i><h6>Year 4,Sem 1</h6></a></div>
             </div>
         </div>
-        <div class="other-skills" style="color: white;margin-top: 7em;">
+        <div class="other-skills" style="color: white;">
             <h2>Other Learned Skill</h2>
             <h3>Accounting</h3>
             <h5 style='padding-left: 1em;'>at Amani Academy(Batch 4)</h5>
@@ -292,56 +277,160 @@
     </body>
 </html>
 <style>
-    .resume-container{
-        width: 80%;
-        height: auto;
-    }
-    .resume-grid{
-        display: grid;
-        grid-template-columns: 30% 70%;
-    }
-    .resume-left-column {
-        margin: 1em 0 1em 0;
-        background-color: aliceblue;
-    }
-    .resume-right-column {
-        margin: 1em 0 1em 1em;
-    }
-    .resume-left-column-container {
+    @media (min-width: 1111px){
 
-    }
-    .resume-right-column-container {
+        html,body,h1,h2,h3,h4,h5,h6 {
+            font-weight: 100!important;
+            font-family: 'Fredoka One'!important;
+        }
+        h6{
+            font-size: 0.7vw;
+        }
+        h5{
+            font-size: 1vw;
+        }
+        p {
+            font-family: Verdana,sans-serif !important;
+        }
+        .resume-container{
+            width: 80%;
+            height: auto;
+            padding-top: 4.2vh;
+        }
+        .resume-grid{
+            display: grid;
+            grid-template-columns: 30% 70%;
+        }
+        .resume-left-column {
+            margin: 1em 0 1em 0;
+            background-color: aliceblue;
+        }
+        .resume-right-column {
+            margin: 1em 0 1em 1em;
+        }
+        .resume-left-column-container {
 
-    }
-    .resume-pic {
+        }
+        .resume-right-column-container {
 
-    }
-    .resume-basic-desc {
+        }
+        .resume-pic {
 
+        }
+        .resume-basic-desc {
+
+        }
+        .bar{
+            font-size: 0.7vw;
+        }
+        .result-grid-container{
+            width: 50%;
+            grid-template-columns: 15% 15% 15% 15% 15% 15% 15% ;
+        }
+        .result-grid-container div i{
+            font-size: 2.5vw;
+        }
+        .other-skills{
+            margin-top: 7em;
+        }
     }
-    .margin-left{
-        margin-left: 1em;
+    @media (max-width: 1110px){
+        html,body,h1,h2,h3,h4,h5,h6 {
+            font-weight: 100!important;
+            font-family: 'Fredoka One'!important;
+        }
+        h2{
+            font-size: 1.5em;
+        }
+        h6{
+            font-size: 0.67em ;
+        }
+        h5{
+            font-size: 1em;
+        }
+        p {
+            font-family: Verdana,sans-serif !important;
+            font-size: 0.6em!important;
+        }
+        .resume-container{
+            padding-top: 7.5vh;
+        }
+        .resume-grid{
+        }
+        .resume-left-column {
+            background-color: aliceblue;
+        }
+        .fa-fw{
+            font-size:1.5em!important;
+        }
+        .bar{
+            font-size: 0.67em;
+        }
+        .Degree-Semester-Results h2,.other-skills h2{
+            font-size: 4.5vw;
+        }
+        .Degree-Semester-Results h3,.other-skills h3{
+            font-size: 3vw;
+        }
+        .Degree-Semester-Results h5,.other-skills h5{
+            font-size: 2vw;
+        }
+        .Degree-Semester-Results h6,.other-skills h6{
+            font-size: 1.5vw;
+        }
+        .result-grid-container{
+            width: 100%;
+            grid-template-columns: auto auto auto auto auto auto auto;
+        }
+        .result-grid-container div i{
+            font-size: 7.5vw;
+        }
+        .other-skills{
+            margin-top: 4em;
+        }
     }
-    .margin-right{
-        margin-right: 1em;
+    .bold{
+        font-weight: bold;
     }
-    .education{
-        margin-top: 1em;
-        background-color: aliceblue;
-        padding: 1em;
+    hr{
+        border-top: 1.5px solid #d7d2d2 !important;
+    }
+    .bar-container{
+        width: 100%;
+        height: fit-content;
+        background-color: wheat;
+        border-radius: 1vw;
+    }
+    .bar{
+        width: 90%;
+        background-color: #009688;
+        border-radius: 1vw;
+        text-align: center;
+        color: white;
     }
     .work-experience {
         background-color: aliceblue;
-        padding: 1em;
+        padding: 1vw;
+    }
+    .education{
+        margin-top: 1vw;
+        background-color: aliceblue;
+        padding: 1vw;
+    }
+    .margin-left{
+        margin-left: 1vw;
+    }
+    .margin-right{
+        margin-right: 1vw;
     }
     .computer-skills{
-        margin-top: 1em;
+        margin-top: 1vw;
         background-color: aliceblue;
-        padding: 1em;
+        padding: 1vw 1vw 4vw 1vw;
     }
     .computer-skills-container{
         display: grid;
-        gap : 0.5em 0;
+        gap : 0.5vw 0;
         grid-template-columns: 25% 25% 30% 20%;
     }
     .graycolor{
@@ -353,21 +442,6 @@
     .text-weight-light{
         font-weight: 100;
     }
-    .bar-container{
-        width: 100%;
-        height: fit-content;
-        background-color: wheat;
-        border-radius: 1em;
-    }
-    .bar{
-        width: 90%;
-        background-color: #009688;
-        border-radius: 1em;
-        text-align: center;
-        color: white;
-        font-size: 0.7em;
-    }
-
     .resume-prog-lang-containter{
         height: auto;
         width: 100%;
@@ -375,33 +449,28 @@
         grid-auto-flow: column;
         grid-template-columns: auto auto auto;
         grid-template-rows: auto auto;
-        gap: 1em 1em;
+        gap: 1vw 1vw;
         justify-content: flex-start;
-        padding-left: 0.5em;
+        padding-left: 0.5vw;
     }
     .resume-prog-lang{
         display: flex;
-        width: 2em;
+        width: 2vw;
     }
     .resume-special-container,.resume-model-soft-containter,.resume-general-container,.resume-OS-container{
         display: flex;
         flex-direction: row;
     }
     .resume-special,.resume-model-soft,.resume-general,.resume-OS{
-        height: 2.5em;
+        height: 2.5vw;
         box-sizing: border-box;
-        margin-left: 0.5em;
+        margin-left: 0.5vw;
     }
-    .bold{
-        font-weight: bold;
-    }
-    hr{
-        border-top: 1.5px solid #d7d2d2 !important;
-    }
+
     .other-skills,.Degree-Semester-Results{
         width: 80%;
     }
-    
+
     .other-skills h2,.other-skills h3,.other-skills h5,.Degree-Semester-Results div h4{
         color: #d9d9d9;
         margin: 0;
@@ -411,15 +480,12 @@
     }
     .result-grid-container{
         display: grid;
-        width: 50%;
         height: 10vh;
-        grid-template-columns: 15% 15% 15% 15% 15% 15% 15% ;
-        margin: 0.5em;
-        padding: 0.5em;
+        margin: 0.5vw;
+        padding: 0.5vw;
     }
     .result-grid-container div i{
-        font-size: 2.5em;
-        margin-bottom: 0.2em;
+        margin-bottom: 0.2vw;
         color: #d9d9d9;
         margin: 0;
     }
