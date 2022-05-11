@@ -382,6 +382,7 @@ body{
         justify-content: center;
     }
     .waviy{
+        font-size: 8vw!important;
         justify-content: center !important;
     }
 }
@@ -764,6 +765,9 @@ body{
     .waviy{
         justify-content: flex-start !important;
     }
+    .waviy span {
+        font-size: 1em!important;
+    }
 }
 
 .waviy {
@@ -771,7 +775,6 @@ body{
 }
 .waviy span {
     font-weight: 600;
-    font-size: 1em;
     color: cyan;
     text-transform: uppercase;
     animation: flip 4s infinite;
