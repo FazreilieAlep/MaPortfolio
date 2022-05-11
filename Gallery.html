@@ -161,7 +161,21 @@ Fazreilie's Official Portfolio site
                     text-align: center;
                     user-select: none;
                 }
-                
+                .close {
+                    position: absolute;
+                    width: 32px;
+                    height: 32px;
+                    opacity: 0.5;
+                    bottom: 0.5em;
+                    right: 0.5em;
+                }
+                .waviy{
+                    font-size: 1.5em;
+                }
+                .AIheadings{
+                    font-size: 6.5vw;
+                    white-space: initial;
+                }
             }
             @media (min-width: 1111px){
                 #text1,
@@ -173,6 +187,21 @@ Fazreilie's Official Portfolio site
                     font-size: 80pt;
                     text-align: center;
                     user-select: none;
+                }
+                .close {
+                    position: absolute;
+                    right: 1em;
+                    top: 1em;
+                    width: 32px;
+                    height: 32px;
+                    opacity: 0.5;
+                }
+                .waviy{
+                    font-size: 2.5em;
+                }
+                .AIheadings{
+                    font-size: 1.3em;
+                    white-space: nowrap;
                 }
             }
 
@@ -189,14 +218,7 @@ Fazreilie's Official Portfolio site
                 opacity: 1;
             }
 
-            .close {
-                position: absolute;
-                right: 1em;
-                top: 1em;
-                width: 32px;
-                height: 32px;
-                opacity: 0.5;
-            }
+
             .close:hover {
                 opacity: 1;
             }
@@ -241,10 +263,8 @@ Fazreilie's Official Portfolio site
                 text-align:center;
                 display:inline-block;
                 overflow:hidden;
-                white-space:nowrap;
                 color:#555;
                 font-weight:300;
-                font-size: 1.3em;
             }
 
             .AIheadings-first {    /* For increasing performance 
@@ -319,7 +339,6 @@ Fazreilie's Official Portfolio site
             .waviy {
                 width: auto;
                 position: relative;
-                font-size: 2.5em;
                 height: auto;
                 display: flex;
                 align-items: center;
@@ -369,10 +388,34 @@ Fazreilie's Official Portfolio site
                 padding: 10px;
             }
 
+            @media (max-width: 1110px){
+                .h2a{
+                    font-size: 16vw !important;
+
+                }
+                .text{
+                    transform: translateY(-31.5vw) translateX(-3vw);
+                }
+                .text:before, .text:after{
+                    margin: 6vw 0;
+                    height: 3vw;
+                }
+            }
+            @media (min-width: 1111px){
+                .h2a{
+                    font-size: 110px !important;
+                }
+                .text{
+                    transform: translateY(-100%);
+                }
+                .text:before, .text:after{
+                    margin: 50px 0;
+                    height: 10px;
+                }
+            }
             .h2a {
                 font-weight: 900;
                 text-transform: uppercase;
-                font-size: 110px !important;
                 letter-spacing: -0.05em;
                 text-align: center;
                 line-height: 1 !important;
@@ -392,14 +435,11 @@ Fazreilie's Official Portfolio site
             .text {
                 position: absolute;
                 font-family: "Open Sans";
-                transform: translateY(-100%);
                 transition: all 0.3s;
                 width: inherit;
             }
             .text:before, .text:after {
                 display: flex;
-                margin: 50px 0;
-                height: 10px;
                 background: linear-gradient(to right, #00fcff, #00ff72);
                 opacity: 0.75;
                 content: "";
@@ -430,7 +470,7 @@ Fazreilie's Official Portfolio site
                 width: 100%;
             }
             .containera:hover .text .inner {
-                padding: 60px;
+                padding: 3vw;
                 max-height: 300px;
                 transform: scale(1);
             }
@@ -460,12 +500,21 @@ Fazreilie's Official Portfolio site
                 /* Compensate for excess margin on outer gallery flex items */
                 margin: -1rem -1rem;
             }
-
+            @media (max-width: 1110px){
+                .gallery-item{
+                    margin: 0 1em 0.5em 1em;
+                }
+                #learnedTechniques{
+                }
+            }
+            @media (min-width: 1111px){
+                .gallery-item{
+                    margin: 1rem;
+                }
+            }
             .gallery-item {
                 /* Minimum width of 24rem and grow to fit available space */
                 flex: 1 0 24rem;
-                /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
-                margin: 1rem;
                 box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
                 overflow: hidden;
             }
@@ -491,15 +540,21 @@ Fazreilie's Official Portfolio site
             */
 
             @supports (display: grid) {
-                .gallery {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-                    grid-gap: 2rem;
+                @media (max-width: 1110px){
+                    .gallery {
+                        display: grid;
+                    }
                 }
-
+                @media (min-width: 1111px){
+                    .gallery {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+                        grid-gap: 2rem;
+                    }
+                }
                 .gallery,
                 .gallery-item {
-                    margin: 0;
+                    margin: 0 0 2vw 0;
                 }
             }
         </style>
@@ -713,9 +768,9 @@ Fazreilie's Official Portfolio site
                             <span class="gradient-text-3D animate3D" style="--i:10">G</span>
                         </div>
                         <br>
-                        <div class="margin-left">
+                        <div class="margin-left" style="display:flex">
                             <a href="#3Dsoftware"><button class="btn btn-primary btn-lg" type="button">Software</button></a>
-                            <a href="#3Dgallery"><button type="button" class="btn btn-secondary btn-lg">Project Gallery</button></a>
+                            <a href="#3Dgallery" style="margin: 0 2% 0 2%"><button type="button" class="btn btn-secondary btn-lg">Project Gallery</button></a>
                         </div>
                     </div>
                     <div id="3Dsoftware" style="width: 100%;
@@ -850,7 +905,7 @@ Fazreilie's Official Portfolio site
                          justify-content: center;
                          margin-top: 3em;">
                         <div class="containera">
-                            <h2 class="h2a" style="color: #747474;">A.I TECHNIQUES</h2>
+                            <h2 class="h2a" style="color: #747474;">TECHNIQUES</h2>
                             <h2 class="h2a" style="color: #747474;">LEARNED</h2>
                             <div style="width: 100%;display: flex;">
                                 <div class="text overflowF">
@@ -880,8 +935,8 @@ Fazreilie's Official Portfolio site
                     <hr style="margin-bottom: 0;">
                     <div id="codeSample">
                         <div class="web-container">
-                            <div style="margin-bottom: 2vh;width: 90%;height: 80vh;display: grid;grid-template-columns: 19% 1% 80%;padding-top: 1em;color: #747474;">
-                                <div class="AI-nav" style="">
+                            <div class='con'>
+                                <div class="AI-nav">
                                     <ul>
                                         <li><button id="switchTrainingLevelFLS">Training Level FLS</button></li>
                                         <li><button id="switchMLAcademicProject">Machine Learning Academic Project</button></li>
@@ -889,7 +944,7 @@ Fazreilie's Official Portfolio site
                                     </ul>
                                 </div>
                                 <div style="background-color: black;width: 11%;display: flex;margin-left: 89%;"></div>
-                                <div style="background-color: #3e3e3e1f;margin-left: 1em;padding: 1.5em;">
+                                <div class='AIcontent' style="background-color: #3e3e3e1f;margin-left: 1em;padding: 1.5em;">
                                     <div id="Training-Level-FLS">
                                         <div style='width: 100%;height: auto;position: relative;overflow: hidden;'>
                                             <video src="asset/AI/FL_GroupProjectVideo.mp4" controls style="width: 100%;height: auto;"></video>
@@ -932,9 +987,9 @@ Fazreilie's Official Portfolio site
                             <span class="gradient-text-W3 animateW3" style="--i:14">T</span>
                         </div>
                         <br>
-                        <div class="margin-left">
+                        <div class="margin-left" style='display: flex;'>
                             <a href="#W3Language"><button class="btn btn-primary btn-lg" type="button">Language</button></a>
-                            <a href="#developedWebsite-container"><button type="button" class="btn btn-secondary btn-lg">Developed Website</button></a>
+                            <a style='margin: 0 2%;' href="#developedWebsite-container"><button type="button" class="btn btn-secondary btn-lg">Developed Website</button></a>
                         </div>
 
                         <div class="word"></div>
@@ -1013,7 +1068,7 @@ Fazreilie's Official Portfolio site
                         <div id="GreenDeals">
                             <div class="web-container">
                                 <div style="width: 90%;height: auto;">
-                                    <video style="width: 100%;height: auto;" controls autoplay>
+                                    <video style="width: 100%;height: auto;" controls>
                                         <source src="asset/W3/GREENDEALS/video_2022-04-21_14-34-57.mp4" type="video/mp4">
                                         <source src="asset/W3/GREENDEALS/video_2022-04-21_14-34-57.mp4" type="video/ogg">
                                         Your browser does not support the video tag.
@@ -1199,6 +1254,20 @@ Fazreilie's Official Portfolio site
             width: 100%;
             height: 100vh;
         }
+        .web-container .con{
+            margin-bottom: 2vh;
+            width: 90%;
+            height: 80vh;
+            display: grid;
+            grid-template-columns: 19% 1% 80%;
+            padding-top: 1em;
+            color: #747474;
+        }
+        .AI-nav{
+            display: flex;
+            align-items: center;
+            text-align: end;
+        }
     }
     @media (max-width: 1110px){
         .firstpage{
@@ -1228,6 +1297,32 @@ Fazreilie's Official Portfolio site
         .space {
             width: 100%;
             height: 50vh;
+        }
+        .word{
+            font-size: 4vw;
+        }
+        .web-container .con{
+            margin-bottom: 2vh;
+            width: 90%;
+            height: 80vh;
+            display: grid;
+            grid-template-columns: 25% 1% 74%;
+            padding-top: 1em;
+            color: #747474;
+        }
+        .AI-nav{
+            display: flex;
+            align-items: center;
+            text-align: end;
+        }
+        .AI-nav ul{
+            font-size: 3vw;
+        }
+        .AIcontent{
+            padding: 0!important;
+        }
+        .developedWebsite-nav-bar ul{
+            font-size: 2vw;
         }
     }
     @media screen and (max-width: 800px) {
@@ -1499,6 +1594,7 @@ Fazreilie's Official Portfolio site
     }
     .developedWebsite-nav-bar ul{
         width: 100%;
+        height: auto;
         display: flex;
         justify-content: center;
     }
@@ -1561,12 +1657,6 @@ Fazreilie's Official Portfolio site
         grid-template-columns: 49.5% 49.5%;
         grid-template-rows: auto auto;
         grid-gap: 1% 1%;
-    }
-
-    .AI-nav{
-        display: flex;
-        align-items: center;
-        text-align: end;
     }
     .AI-nav ul li button{
         width: 100% !important;
